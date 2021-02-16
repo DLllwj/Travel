@@ -29,7 +29,7 @@ export default {
         imgUrl: "https://m3.tuniucdn.com/fb2/t1/G6/M00/4D/08/Cii-TF4gAh6IeM6pAAPkusOqXEMAALHJwD_ErAAA-TS97.jpeg"
       }, {
         id: "0003",
-        imgUrl: "http://m.elongstatic.com/promotions/wireless/uploadImages/images/161217139090243.jpg"
+        imgUrl: "//imgs.qunarzz.com/vs_ceph_vcimg/569cae4ae98e9793f7341e85eed73c54.jpeg"
       },
       ]
     }

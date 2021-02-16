@@ -65,6 +65,7 @@ export default {
   overflow: hidden;
   height: 0;
   padding-bottom: 50%;
+  margin-top: 0.1rem;
 
   .icon {
     float: left;
