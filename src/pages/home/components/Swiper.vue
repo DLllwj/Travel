@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" :not-next-tick="notNextTick">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item in swiperList" :key="item.id">
-        <img :src="item.imgUrl" alt="">
+      <swiper-slide v-for="item of list" :key="item.id">
+        <img :src="item.imgUrl">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>
@@ -14,24 +14,21 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data() {
     return {
-      notNextTick: true,
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
       },
-      swiperList: [{
-        id: "0001",
-        imgUrl: "https://m4.tuniucdn.com/fb2/t1/G6/M00/96/CF/Cii-TF6O0rGIWxuhABNiU4_TqZQAAMR9wDFnTwAE2Jr049.png"
-      }, {
-        id: "0002",
-        imgUrl: "https://m3.tuniucdn.com/fb2/t1/G6/M00/4D/08/Cii-TF4gAh6IeM6pAAPkusOqXEMAALHJwD_ErAAA-TS97.jpeg"
-      }, {
-        id: "0003",
-        imgUrl: "//imgs.qunarzz.com/vs_ceph_vcimg/569cae4ae98e9793f7341e85eed73c54.jpeg"
-      },
-      ]
+    }
+  },
+  computed: {
+    //轮播图开始显示的是第一页，全部加载完再显示
+    showSwiper() {
+      return this.list.length
     }
   }
 }
