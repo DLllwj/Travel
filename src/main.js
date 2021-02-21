@@ -13,6 +13,8 @@ import './assets/styles/iconfont.css'
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

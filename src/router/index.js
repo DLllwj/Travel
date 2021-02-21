@@ -6,6 +6,12 @@ import Detail from '@/pages/detail/Detail'
 
 Vue.use(Router)
 
+const includPush = Router.prototype.push
+
+Router.prototype.push = function push(location) {
+  return includPush.call(this, location).catch(err => err)
+
+}
 export default new Router({
   routes: [
     {
